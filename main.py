@@ -1,7 +1,7 @@
 import logging
 import os
 from dotenv import load_dotenv
-import speedtest-cli
+import speedtest
 from telegram import Update
 from telegram.ext import (
     Application,
