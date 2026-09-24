@@ -40,8 +40,10 @@ async def hours(update: Update,context):
     reply_markup=comandos_rapidos)
 
 async def net(update: Update, context):
-    download, upload = await asyncio.to_thread(valuate_connection)
-
+    download, upload = await asyncio.wait_for(
+    asyncio.to_thread(valuate_connection),
+    timeout=60
+)
     await update.message.reply_text(
         f"resultado da conexao e: {download:.2f}Mbps de download e {upload:.2f}Mbps upload",
         reply_markup=comandos_rapidos
