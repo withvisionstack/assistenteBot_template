@@ -5,6 +5,7 @@ from telegram.ext import (
     ContextTypes,
 )
 from datetime import datetime, date, time, timedelta
+import asyncio
 import httpx
 
 
@@ -38,11 +39,13 @@ async def hours(update: Update,context):
     await update.message.reply_text(f"Agora e exatamente {inicio} tenha um bom dia",
     reply_markup=comandos_rapidos)
 
+async def net(update: Update, context):
+    download, upload = await asyncio.to_thread(valuate_connection)
 
-async def net(update: Update,context):
-    download, upload = valuate_connection()
-    await update.message.reply_text(f'resultado da conexao e: {download:.2f}Mbps de download e {upload:.2f}Mbps upload',
-    reply_markup=comandos_rapidos)
+    await update.message.reply_text(
+        f"resultado da conexao e: {download:.2f}Mbps de download e {upload:.2f}Mbps upload",
+        reply_markup=comandos_rapidos
+    )
 
 
 async def bolsa_valores(update: Update, context):
