@@ -31,7 +31,6 @@ O projeto foi desenvolvido com foco em estudo e prática de desenvolvimento de b
 ```
 meu-bot/
 ├── handlers/
-│   ├── __init__.py
 │   ├── talk.py
 │   └── botoes.py
 ├── main.py
