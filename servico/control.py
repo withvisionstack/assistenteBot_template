@@ -8,8 +8,3 @@ def valuate_connection():
     return download_speed, upload_speed
 
 
-if __name__ == "__main__":
-    download_speed, upload_speed = valuate_connection()
-
-    print(f"Download Speed: {download_speed:.2f} Mbps")
-    print(f"Upload Speed: {upload_speed:.2f} Mbps")
