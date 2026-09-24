@@ -2,6 +2,7 @@ import logging
 import os
 from dotenv import load_dotenv
 import speedtest
+import asyncio
 from telegram import Update
 from telegram.ext import (
     Application,
