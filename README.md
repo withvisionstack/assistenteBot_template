@@ -16,6 +16,8 @@ HTTPX
 
 Docker
 
+
+
 📁 Estrutura
 meu-bot/
 ├── handlers/
@@ -28,6 +30,9 @@ meu-bot/
 ├── .dockerignore
 ├── .env
 └── README.md
+
+
+
 
 ⚙️ Configuração
 
