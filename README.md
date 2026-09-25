@@ -34,7 +34,7 @@ meu-bot/
 │   ├── talk.py
 │   └── botoes.py
 ├── main.py
-├── requirements.txt
+├── requiriments.txt
 ├── Dockerfile
 ├── .dockerignore
 ├── .env
